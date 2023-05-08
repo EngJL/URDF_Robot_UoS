@@ -1,0 +1,2313 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<robot
+  name="robotURDF">
+ 
+  <link
+    name="Chassis_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="25" />
+      <inertia
+        ixx="0.001"
+        ixy="0"
+        ixz="0"
+        iyy="0.001"
+        iyz="0"
+        izz="0.001" />
+        </inertial>
+    <visual>
+      <origin
+        xyz="-0.00223 0.006439 -0.001176"
+        rpy="0 -0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/chassisbox.dae" scale="1 1 1"/>
+     
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+        </visual>
+    <collision>
+
+      <origin
+        xyz="-0.00223 0.006439 -0.001176"
+        rpy="0 -0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/chassisbox.dae" scale="1 1 1"/>
+           </geometry>
+           </collision>
+      </link>
+
+<link
+    name="BRspindle_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+       <origin
+        xyz="0.23777 0.111939 0.018824"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.23777 0.111939 0.018824"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      </collision>
+  </link>
+  
+  
+<link
+    name="BRWheel_link">
+    <inertial>
+    
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.23777 0.231939 0.018824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.23777 0.231939 0.018824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link
+    name="BLspindle_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+       <origin
+        xyz="0.23777 -0.099061 0.018824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.23777 -0.099061 0.018824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      </collision>
+  </link>
+<link
+    name="BLWheel_link">
+    <inertial>
+    
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.23777 -0.1105 0.018824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+       xyz="0.23777 -0.1105 0.018824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link
+    name="FRspindle_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+       <origin
+        xyz="-0.24223 0.126939 0.017824"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 0.126939 0.017824"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      </collision>
+  </link>
+  
+<link
+    name="FRWheel_link">
+    <inertial>
+    
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.24223 0.231939 0.017824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 0.231939 0.017824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+  
+  <link
+    name="FLspindle_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+       <origin
+        xyz="-0.24223 -0.114061 0.018824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 -0.114061 0.018824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      </collision>
+  </link>
+<link
+    name="FLWheel_link">
+    <inertial>
+    
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.24223 -0.1105 0.018824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 -0.1105 0.018824"
+        rpy="0 -0 3.14159" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/wheel1.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+  <link name="WingBRT_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.23777 0.085189 0.038824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshorttopwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.23777 0.085189 0.038824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshorttopwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link name="WingBRB_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.23777 0.085189 -0.002176"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshortbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.23777 0.085189 -0.002176"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshortbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link name="WingBLT_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.23777 -0.072311 0.038824"
+
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshorttopwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.23777 -0.072311 0.038824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshorttopwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link name="WingBLB_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0.23777 -0.072311 -0.002176"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshortbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0.23777 -0.072311 -0.002176"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/blackshortbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link name="WingFRT_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.24223 0.092689 0.038824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongtopwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 0.092689 0.038824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongtopwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link name="WingFRB_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.24223 0.092689 -0.002176"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 0.092689 -0.002176"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link name="WingFLT_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.24223 -0.079811 0.038824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongtopwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 -0.079811 0.038824"
+        rpy="0 0 -1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongtopwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+
+<link name="WingFLB_link">
+ <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="0.2" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="-0.24223 -0.079811 -0.002176"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="-0.24223 -0.079811 -0.002176"
+        rpy="0 -0 1.5708" />
+      <geometry>
+        <mesh
+         filename="package://robotURDF/DAEmeshes/frontlongbottomwing.dae" scale="1 1 1"/>
+      </geometry>
+     </collision>
+  </link>
+  
+<link name="lidar_link">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.004"/>
+    <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+  </inertial>
+  <collision name="lidar_collision">
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
+    <geometry>
+      <cylinder radius="0.0508" length="0.18"/>
+    </geometry>
+  </collision>
+  <visual name="lidar_visual">
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
+    <geometry>
+      <cylinder radius="0.0508" length="0.08"/>
+    </geometry>
+    <material name="lidar_material">
+      <color rgba="0 0 0 1"/>
+    </material>
+  </visual>
+  </link>
+  
+<gazebo reference="lidar_link">
+  <sensor type="ray" name="lidar_sensor">
+ <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>5</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>360</samples>
+            <resolution>1</resolution>
+            <min_angle>0</min_angle>
+            <max_angle>6.28</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>3.5</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="lidar_sensor" filename="libgazebo_ros_laser.so">
+        <topicName>/robot/laser/scan</topicName>
+        <frameName>lidar_link</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+<link name="camera_depth_frame">
+  <origin xyz="0 0 0.33" rpy="0 0 0"/>
+  <collision name="camera_frame_collision">
+    <geometry>
+      <box size="0.015 0.08 0.022"/>
+    </geometry>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </collision>
+</link>
+
+
+<link name="camera_link">
+  <inertial>
+    <origin xyz="0 0 0.33" rpy="0 0 0"/>
+    <mass value="0.004"/>
+    <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000"     izz="0.001"/>
+  </inertial>
+  <visual name="camera_visual">
+  <origin xyz="0 0 0.33" rpy="0 0 0"/>
+    <geometry>
+      <box size="0.015 0.08 0.022"/>
+    </geometry>
+    <material name="lidar_material">
+      <color rgba="0 0 0 1"/>
+    </material>
+  </visual>
+   <collision name="camera_collision">
+    <origin xyz="0 0 0.33" rpy="0 0 0"/>
+    <geometry>
+     <box size="0.015 0.08 0.022"/>
+    </geometry>
+  </collision>
+ </link>
+ 
+<gazebo reference = "camera_link" >
+<sensor name="depth_camera" type="camera">
+    <always_on>true</always_on>
+    <visualize>true</visualize>
+    <update_rate>5</update_rate>
+    <camera name="robot_camera">
+      <horizontal_fov>1.02974</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8G8B8</format>
+      </image>
+      <clip>
+        <near>0.02</near>
+        <far>10</far>
+      </clip>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.007</stddev>
+      </noise>
+    </camera>
+    <plugin name="depth_camera_controller" filename="libgazebo_ros_camera.so">
+      <camera_name>depth_camera</camera_name>
+      <frame_name>camera_depth_frame</frame_name>
+      <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <imageTopicName>camera_image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_link</frameName>
+      <hack_baseline>0</hack_baseline>
+      <min_depth>0.001</min_depth>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<link name="gps_link">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.0001"/>
+    <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+  </inertial>
+  <collision name="gps_collision">
+    <origin xyz="0 0 -0" rpy="0 0 0"/>
+    <geometry>
+      <cylinder radius="0.1" length="0.1"/>
+    </geometry>
+  </collision>
+  <visual name="gps_visual">
+    <origin xyz="0 0 -0" rpy="0 0 0"/>
+    <geometry>
+      <cylinder radius="0.1" length="0.1"/>
+    </geometry>
+    <material name="lidar_material">
+      <color rgba="0 0 0 1"/>
+    </material>
+  </visual>
+  </link>
+  
+
+<gazebo reference="gps_link">
+  <sensor name="gps_sensor" type="gps">
+    <alwaysOn>true</alwaysOn>
+    <updateRate>10.0</updateRate>
+    <gps>
+      <horizontal>1.0</horizontal>
+      <vertical>1.0</vertical>
+      <velocity>0.1</velocity>
+      <reference_latitude>47.3667</reference_latitude>
+      <reference_longitude>8.5500</reference_longitude>
+      <reference_heading>0.0</reference_heading>
+      <map_origin_latitude>47.3667</map_origin_latitude>
+      <map_origin_longitude>8.5500</map_origin_longitude>
+      <map_origin_altitude>0.0</map_origin_altitude>
+    </gps>
+    <plugin name="gps_plugin" filename="libgazebo_ros_gps_sensor.so">
+      <rosDebugLevel>info</rosDebugLevel>
+      <frameId>gps_sensor</frameId>
+      <updateRate>10.0</updateRate>
+      <topicName>/robot/gps</topicName>
+        <frameName>gps_link</frameName>
+    </plugin>
+  </sensor>
+</gazebo>
+
+<link name="imu_link">
+  <inertial>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <mass value="0.004"/>
+    <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
+  </inertial>
+  <collision name="imu_collision">
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
+    <geometry>
+      <cylinder radius="0.01" length="0.08"/>
+    </geometry>
+  </collision>
+  <visual name="imu_visual">
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
+    <geometry>
+      <cylinder radius="0.01" length="0.08"/>
+    </geometry>
+    <material name="lidar_material">
+      <color rgba="0 0 0 1"/>
+    </material>
+  </visual>
+  </link>
+  
+
+<gazebo reference="imu_link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+   
+   <joint name="imuchassis_joint" type="fixed">
+  <origin xyz="0 0 0.9" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="imu_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="lidarchassis_joint" type="fixed">
+  <origin xyz="0 0 0.3" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="lidar_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="camerachassis_joint" type="fixed">
+  <origin xyz="1 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="camera_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="gps_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="gps_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="cameradepth_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="camera_link"/>
+  <child link="camera_depth_frame"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WheelBR_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="BRspindle_link"/>
+  <child link="BRWheel_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingBRT_Chassis_joint" type="fixed">
+  <origin xyz="-0.02875 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingBRT_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingBRT_spindleBR_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="WingBRT_link"/>
+  <child link="BRspindle_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingBRB_Chassis_joint" type="fixed">
+  <origin xyz="-0.02875 0 -0.001" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingBRB_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WingBRB_spindleBR_joint" type="fixed">
+  <origin xyz="0 0 -0.02" rpy="0 -0 0"/>
+  <parent link="WingBRB_link"/>
+  <child link="BRspindle_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingBLT_Chassis_joint" type="fixed">
+  <origin xyz="-0.02875 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingBLT_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingBLT_spindleBL_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="WingBLT_link"/>
+  <child link="BLspindle_link"/>
+  <axis xyz="0 -1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingBLB_Chassis_joint" type="fixed">
+  <origin xyz="-0.02875 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingBLB_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingBLB_spindleBL_joint" type="fixed">
+  <origin xyz="0 0 -0.02" rpy="0 -0 0"/>
+  <parent link="WingBLB_link"/>
+  <child link="BLspindle_link"/>
+  <axis xyz="0 -1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WheelBL_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="BLspindle_link"/>
+  <child link="BLWheel_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingFRT_Chassis_joint" type="fixed">
+  <origin xyz="0.03425 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingFRT_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WingFRT_spindleFR_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="WingFRT_link"/>
+  <child link="FRspindle_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingFRB_Chassis_joint" type="fixed">
+  <origin xyz="0.03625 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingFRB_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WingFRB_spindleFR_joint" type="fixed">
+  <origin xyz="0 0 -0.02" rpy="0 -0 0"/>
+  <parent link="WingFRB_link"/>
+  <child link="FRspindle_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WheelFR_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="FRspindle_link"/>
+  <child link="FRWheel_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WingFLT_Chassis_joint" type="fixed">
+  <origin xyz="0.03625 0 0" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingFLT_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingFLT_spindleFL_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="WingFLT_link"/>
+  <child link="FLspindle_link"/>
+  <axis xyz="0 -1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+<joint name="WingFLB_Chassis_joint" type="fixed">
+  <origin xyz="0.03625 0 0.001" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="WingFLB_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WingFLB_spindleFL_joint" type="fixed">
+  <origin xyz="0 0 -0.02" rpy="0 -0 0"/>
+  <parent link="WingFLB_link"/>
+  <child link="FLspindle_link"/>
+  <axis xyz="0 -1 0"/>
+  <dynamics damping="0.2" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+<joint name="WheelFL_joint" type="fixed">
+  <origin xyz="0 0 0" rpy="0 -0 0"/>
+  <parent link="FLspindle_link"/>
+  <child link="FLWheel_link"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+
+
+
+<gazebo>
+        <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
+
+            <ros>
+          <namespace>my_robot</namespace>
+          <argument>cmd_vel</argument>
+          <argument>odom</argument>
+        </ros>
+
+        <!-- wheels -->
+        <left_joint>WheelFL_joint</left_joint>
+        <right_joint>WheelFR_joint</right_joint>
+
+        <!-- kinematics -->
+        <wheel_separation>0.540</wheel_separation>
+        <wheel_diameter>0.203</wheel_diameter>
+
+        <!-- limits -->
+        <max_wheel_torque>50</max_wheel_torque>
+        <max_wheel_acceleration>2.0</max_wheel_acceleration>
+        
+        <!-- 	Velocity information -->
+        <command_topic>cmd_vel</command_topic>
+        
+        <!-- output -->
+        <publish_odom>true</publish_odom>
+        <publish_odom_tf>true</publish_odom_tf>
+        <publish_wheel_tf>true</publish_wheel_tf>
+
+        <odometry_frame>odom</odometry_frame>
+        <odometry_topic>odom</odometry_topic>
+        <robot_base_frame>Chassis_link</robot_base_frame>
+        
+        <odometry_source>0</odometry_source>
+
+    <!-- Change the ROS topic we will publish the odometry data to -->
+    <ros>
+      <remapping>odom:=wheel/odometry</remapping>
+    </ros>
+
+        </plugin>
+    </gazebo>
+
+
+
+<gazebo reference="Chassis_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="WingBLB_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="WingBLT_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="WingBRB_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="WingBRT_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="WingBLT_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="WingFLB_link" >
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="WingFLT_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+       
+<gazebo reference="WingFRB_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+       
+<gazebo reference="WingFRT_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+       
+<gazebo reference="BLspindle_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+              
+<gazebo reference="BRspindle_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+              
+<gazebo reference="FLspindle_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+              
+<gazebo reference="FRspindle_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+       </gazebo>
+
+<gazebo reference="BLWheel_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+ </gazebo>
+ 
+<gazebo reference="BRWheel_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+</gazebo>
+         
+<gazebo reference="FRWheel_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+</gazebo>
+         
+<gazebo reference="BRWheel_link">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+      <max_contacts>10</max_contacts>
+      <transparency>0</transparency>
+      <cast_shadows>1</cast_shadows>
+      <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+</gazebo>
+        
+ <link
+    name="8track">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <mass
+        value="1" />
+      <inertia
+        ixx="0.166667"
+        ixy="0"
+        ixz="0"
+        iyy="0.166667"
+        iyz="0"
+        izz="0.166667" />
+    </inertial>
+    <visual>
+       <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/8track.dae" scale="1 1 1"/>
+      </geometry>
+      <material
+        name="Grey">
+        <color
+          rgba="0.1 0.1 0.1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 -0 0" />
+      <geometry>
+        <mesh
+          filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
+      </geometry>
+      </collision>
+  </link>    
+        
+        <joint name="8joint" type="fixed">
+  <origin xyz="0 0 -0.1" rpy="0 -0 0"/>
+  <parent link="Chassis_link"/>
+  <child link="8track"/>
+  <axis xyz="0 1 0"/>
+  <dynamics damping="0.0" friction="0.0"/>
+  <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
+</joint>
+        
+<gazebo reference="8track">
+   <gravity>1</gravity>
+      <self_collide>0</self_collide>
+      <kinematic>0</kinematic>
+      <enable_wind>0</enable_wind>
+      <laser_retro>0</laser_retro>
+         <surface>
+          <friction>
+            <ode>
+              <mu>1</mu>
+              <mu2>1</mu2>
+              <fdir1>0 0 0</fdir1>
+              <slip1>0</slip1>
+              <slip2>0</slip2>
+            </ode>
+            <torsional>
+              <coefficient>1</coefficient>
+              <patch_radius>0</patch_radius>
+              <surface_radius>0</surface_radius>
+              <use_patch_radius>1</use_patch_radius>
+              <ode>
+                <slip>0</slip>
+              </ode>
+            </torsional>
+          </friction>
+          <bounce>
+            <restitution_coefficient>0</restitution_coefficient>
+            <threshold>1e+06</threshold>
+          </bounce>
+          <contact>
+            <collide_without_contact>0</collide_without_contact>
+            <collide_without_contact_bitmask>1</collide_without_contact_bitmask>
+            <collide_bitmask>1</collide_bitmask>
+            <ode>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+              <max_vel>0.01</max_vel>
+              <min_depth>0</min_depth>
+            </ode>
+            <bullet>
+              <split_impulse>1</split_impulse>
+              <split_impulse_penetration_threshold>-0.01</split_impulse_penetration_threshold>
+              <soft_cfm>0</soft_cfm>
+              <soft_erp>0.2</soft_erp>
+              <kp>1e+13</kp>
+              <kd>1</kd>
+            </bullet>
+          </contact>
+        </surface>
+</gazebo>
+        
+</robot>
