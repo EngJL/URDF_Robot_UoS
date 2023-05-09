@@ -705,13 +705,13 @@
     <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000" izz="0.001"/>
   </inertial>
   <collision name="lidar_collision">
-    <origin xyz="-0.032 0 0.33" rpy="0 0 0"/>
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
     <geometry>
       <cylinder radius="0.0508" length="0.18"/>
     </geometry>
   </collision>
   <visual name="lidar_visual">
-    <origin xyz="-0.002 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 -0.28" rpy="0 0 0"/>
     <geometry>
       <cylinder radius="0.0508" length="0.08"/>
     </geometry>
@@ -767,21 +767,21 @@
 
 <link name="camera_link">
   <inertial>
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0.33" rpy="0 0 0"/>
     <mass value="0.004"/>
     <inertia ixx="0.001" ixy="0.000" ixz="0.000" iyy="0.001" iyz="0.000"     izz="0.001"/>
   </inertial>
   <visual name="camera_visual">
-  <origin xyz="0 0 0" rpy="0 0 0"/>
+  <origin xyz="0 0 0.33" rpy="0 0 0"/>
     <geometry>
       <box size="0.015 0.08 0.022"/>
     </geometry>
-    <material name="camera_material">
+    <material name="lidar_material">
       <color rgba="0 0 0 1"/>
     </material>
   </visual>
    <collision name="camera_collision">
-    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <origin xyz="0 0 0.33" rpy="0 0 0"/>
     <geometry>
      <box size="0.015 0.08 0.022"/>
     </geometry>
@@ -833,15 +833,15 @@
   <collision name="gps_collision">
     <origin xyz="0 0 -0" rpy="0 0 0"/>
     <geometry>
-      <cylinder radius="0" length="0"/>
+      <cylinder radius="0.1" length="0.1"/>
     </geometry>
   </collision>
   <visual name="gps_visual">
     <origin xyz="0 0 -0" rpy="0 0 0"/>
     <geometry>
-      <cylinder radius="0" length="0"/>
+      <cylinder radius="0.1" length="0.1"/>
     </geometry>
-    <material name="gps_material">
+    <material name="lidar_material">
       <color rgba="0 0 0 1"/>
     </material>
   </visual>
@@ -882,15 +882,15 @@
   <collision name="imu_collision">
     <origin xyz="0 0 -0.28" rpy="0 0 0"/>
     <geometry>
-      <cylinder radius="0" length="0"/>
+      <cylinder radius="0.01" length="0.08"/>
     </geometry>
   </collision>
   <visual name="imu_visual">
     <origin xyz="0 0 -0.28" rpy="0 0 0"/>
     <geometry>
-      <cylinder radius="0" length="0"/>
+      <cylinder radius="0.01" length="0.08"/>
     </geometry>
-    <material name="imu_material">
+    <material name="lidar_material">
       <color rgba="0 0 0 1"/>
     </material>
   </visual>
@@ -937,7 +937,7 @@
 </joint>
 
 <joint name="camerachassis_joint" type="fixed">
-  <origin xyz="0.25 0 0.12" rpy="0 -0 0"/>
+  <origin xyz="1 0 0" rpy="0 -0 0"/>
   <parent link="Chassis_link"/>
   <child link="camera_link"/>
   <axis xyz="0 1 0"/>
@@ -1152,20 +1152,8 @@
   <limit effort="-1" velocity="-1" lower="-1.79769e+308" upper="1.79769e+308" />
 </joint>
 
-<gazebo>
-    <plugin name="joint_states" filename="libgazebo_ros_joint_state_publisher.so">
-      <ros>
-        <remapping>~/out:=joint_states</remapping>
-      </ros>  
-      <update_rate>50</update_rate>
-      <joint_name>imu_joint</joint_name>
-      <joint_name>gps_joint</joint_name>
-      <joint_name>wheelFL_joint</joint_name>
-      <joint_name>wheelFR_joint</joint_name>
-      <joint_name>wheelBL_joint</joint_name>
-      <joint_name>wheelBR_joint</joint_name>
-    </plugin>
-</gazebo>
+
+
 <gazebo>
         <plugin name="diff_drive" filename="libgazebo_ros_diff_drive.so">
 
@@ -2219,7 +2207,6 @@
         </surface>
 </gazebo>
         
-         
  <link
     name="8track">
     <inertial>
@@ -2247,7 +2234,7 @@
       <material
         name="Grey">
         <color
-          rgba="0 1 0 1" />
+          rgba="0.1 0.1 0.1 1" />
       </material>
     </visual>
     <collision>
@@ -2256,13 +2243,13 @@
         rpy="0 -0 0" />
       <geometry>
         <mesh
-          filename="package://robotURDF/DAEmeshes/8track.dae" scale="1 1 1"/>
+          filename="package://robotURDF/DAEmeshes/spindle.dae" scale="1 1 1"/>
       </geometry>
       </collision>
   </link>    
         
         <joint name="8joint" type="fixed">
-  <origin xyz="0 0 -0.06" rpy="0 -0 0"/>
+  <origin xyz="0 0 -0.1" rpy="0 -0 0"/>
   <parent link="Chassis_link"/>
   <child link="8track"/>
   <axis xyz="0 1 0"/>
@@ -2271,7 +2258,6 @@
 </joint>
         
 <gazebo reference="8track">
- <material>Gazebo/Grass</material>
    <gravity>1</gravity>
       <self_collide>0</self_collide>
       <kinematic>0</kinematic>
@@ -2323,6 +2309,5 @@
           </contact>
         </surface>
 </gazebo>
-       
- 
+        
 </robot>
